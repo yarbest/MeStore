@@ -1,0 +1,104 @@
+.hero
+    position: relative
+    height: 100vh
+    background-image: url(../img/bg-hero.png)
+    background-size: cover
+    background-repeat: no-repeat
+    background-attachment: fixed
+    background-color: #bae9ff
+    &::after
+        position: absolute
+        top: 0
+        right: 0
+        content: ''
+        height: 100%
+        width: 57%
+        background-image: url(../img/hero-woman.png)
+        background-size: contain   
+        background-repeat: no-repeat
+        background-position: right top
+        background-attachment: fixed
+    &__body
+        position: relative
+        z-index: 100
+        display: flex
+        align-items: center
+        height: 100vh
+    &__text
+        max-width: 500px
+        margin-left: 70px
+        margin-bottom: -150px
+    &__title
+        margin-bottom: 5px
+        font-weight: 800
+        letter-spacing: -1.18px
+        line-height: 5rem
+        font-size: 6rem
+        text-transform: uppercase
+        text-align: center
+        color: #222222
+    &__title-accent
+        color: #f9236f
+    &__year
+        display: flex
+        justify-content: space-between
+        max-width: 270px
+        margin: 0 auto
+        margin-bottom: 20px
+        color: #222222
+        font-size: 3.5rem 
+        font-weight: 800
+    &__description
+        margin-bottom: 30px
+        color: #494949
+        line-height: 24px
+        text-align: center
+    &__button
+        display: block
+        margin: 0 auto
+        padding: 15px 20px
+        font-size: 2rem
+        font-weight: 800
+        background-image: linear-gradient(to right, #f9236f 0%, #f92346 100%)
+        color: #ffffff
+
+@media (max-width: 1199px)
+    .hero
+        &::after
+            background-position: right -100px top
+
+@media (max-width: 991px)
+    .hero
+        &::after
+            width: 70%
+
+        &__text 
+            max-width: 400px
+            margin-left: 0
+
+@media (max-width: 850px)
+    .hero
+        &::after    
+            background-position: right -150px top
+
+
+
+@media (max-width: 575px)
+    .hero
+        &__text
+            max-width: 300px
+        &__title
+            font-size: 4rem
+            line-height: 3.5rem
+        &__year
+            font-size: 2rem
+            max-width: 150px
+
+@media (max-width: 480px)
+    .hero   
+        background-attachment: static
+        &::after
+            display: none
+        &__text
+            width: 100%
+            max-width: none

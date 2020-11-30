@@ -1,0 +1,204 @@
+.shipping
+    position: absolute
+    top: 0
+    left: 0
+    z-index: 101
+    width: 100%
+    background-color: #ff377e
+    background-image: linear-gradient(to right, #f9236f 0%, #f92346 100%)
+    transition: 0.3s ease
+    &_closed
+        transform: translateY(-100%)
+    &::after
+        position: absolute
+        top: 0
+        left: 0
+        opacity: 0.25
+        content: ''
+        display: block
+        width: 100%
+        height: 100%
+        background-image: url(../img/bg-shipping.jpg)
+        pointer-events: none
+    &__body
+        padding: 10px 0
+        display: flex
+        justify-content: space-between
+    &__text
+        color: #ffffff
+        font-size: 1.8rem
+        font-weight: 700
+    &__close
+        background-color: #fff
+        border-radius: 50%
+        padding: 5px 8px
+        font-weight: 800
+        cursor: pointer
+
+.header
+    position: absolute
+    top: 46px
+    left: 0
+    z-index: 101
+    width: 100%
+    transition: 0.3s ease
+    background-color: #ffffffb4
+    &_top
+        top: 0
+    &__body
+        display: flex
+        flex-direction: column
+        
+
+    &__top
+        display: flex
+        align-items: center
+        padding: 20px 0
+        border-bottom: 1px solid #000
+    &__greeting
+        margin-right: 85px
+        font-weight: 500
+    &__email-block
+    &__email
+        font-weight: 700
+    &__main
+        display: flex
+        align-items: center
+    &__logo
+        margin-right: auto
+        font-weight: 800
+        font-size: 2.6rem
+    &__nav
+        margin-right: 15px
+    &__search
+        padding: 19px 10px      
+    &__cart
+        padding: 19px 10px 
+    &__icon
+        width: 20px
+        height: 20px
+        display: flex
+        transition: 0.3s ease
+    &__toggle-sidebar
+        display: none
+.header-nav
+    &__list
+        display: flex
+        height: 100%
+    &__item
+        &:not(:last-child)
+            margin-right: 15px
+        // height: 100%
+    &__link
+        display: flex
+        align-items: center
+        padding: 20px 5px
+        height: 100%
+        font-size: 1.6rem
+        font-weight: 700
+
+
+
+
+@media (min-width: 1200px)
+    .shipping
+        &__close
+            transition: 0.3s ease
+            &:hover
+                background-color: #ff6098
+                color: #ffffff
+    .header
+        &__logo
+            transition: 0.3s ease
+            &:hover
+                color: #f92346
+        &__email
+            transition: 0.3s ease
+            &:hover
+                color: #f92346
+
+    .header-nav
+        &__link
+            position: relative
+            z-index: 1 //для того, чтобы фон при наведении не вылазил
+        &__item
+            position: relative
+            transition: 0.4s ease
+            &::before
+                content: ''
+                width: 0
+                height: 0
+                position: absolute
+                left: 50%
+                top: 50%
+                background-color: #f9236f
+                transition: 0.4s ease
+            &:hover
+                color: #fff
+                &::before
+                    top: 0
+                    left: 0
+                    width: 100%
+                    height: 100%
+    
+    .header-search, .header-cart
+        position: relative
+        transition: 0.4s ease
+        &::before
+            content: ''
+            width: 0
+            height: 0
+            position: absolute
+            left: 50%
+            top: 50%
+            background-color: #f9236f
+            transition: 0.4s ease
+        &__icon
+            position: relative
+        &:hover
+            &::before
+                top: 0
+                left: 0
+                width: 100%
+                height: 100%
+            .header__icon
+                fill: #fff
+
+@media (max-width: 1199px)
+    .header
+        &__top
+            display: flex
+            justify-content: space-between
+
+@media (max-width: 850px)
+    .header
+        // overflow: hidden
+        &__toggle-sidebar
+            display: block
+    .header-nav
+        // margin-right: 20px
+        position: absolute
+        left: 0
+        bottom: -59px
+        background-color: #ffffffb4
+        transform: translateX(-100%)
+        transition: 0.5s ease
+        &_active
+            transform: translateX(0)
+
+@media (max-width: 767px)
+    .header
+        &__top
+            font-size: 1.4rem
+        &__greeting
+            margin-right: 10px
+    .header-nav
+        &__list
+            flex-wrap: wrap
+            justify-content: center
+
+@media (max-width: 480px)
+    .header
+        &__top
+            flex-direction: column
+            padding: 5px 0

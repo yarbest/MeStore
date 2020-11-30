@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title MeStore
+        link(rel="stylesheet", href="css/main.css")
+    body
+        //- pug -w . -o ./ -P
+        .shipping
+            .container
+                .shipping__body
+                    p.shipping__text Free International Shipping with $75 Purchase 
+                    button.shipping__close X
+        
+        header.header
+            .container
+                .header__body
+                    .header__top
+                        p.header__greeting  Добро пожаловать в MeShop
+                        .header__email-block
+                            span Email: 
+                            a.header__email(href="mailto:free@psdfreebies.com") free@psdfreebies.com
+                            
+
+                    .header__main
+                        a.header__logo(href="") MeStore
+                        nav.header__nav.header-nav
+                            ul.header-nav__list
+                                li.header-nav__item 
+                                    a.header-nav__link(href="") Главная
+                                li.header-nav__item 
+                                    a.header-nav__link(href="") Магазин
+                                li.header-nav__item 
+                                    a.header-nav__link(href="") Товары
+                                li.header-nav__item
+                                    a.header-nav__link(href="") Блог
+                                li.header-nav__item
+                                    a.header-nav__link(href="") Портфолио
+
+                        input(type="checkbox" id="checkbox2" class="checkbox2 visuallyHidden")
+                        label(for="checkbox2" class="header__toggle-sidebar")
+                            .hamburger.hamburger2
+                                span.bar.bar1
+                                span.bar.bar2
+                                span.bar.bar3
+                                span.bar.bar4        
+
+                        button.header__search.header-search                            
+                            svg.header-search__icon.header__icon
+                                use(xlink:href="img/icons/icons.svg#search")
+                        a.header__cart.header-cart(href="")
+                            svg.header-cart__icon.header__icon
+                                use(xlink:href="img/icons/icons.svg#cart")
+
+                        
+
+        section.hero
+            .container
+                .hero__body
+                    .hero__text
+                        h1.hero__title 
+                            |Fashion 
+                            br
+                            span.hero__title-accent Carnival
+                        .hero__year
+                            span 2
+                            span 0
+                            span 2
+                            span 2
+                        p.hero__description Lorem Ipsum. Proin gravida nibh velit it’s a cold world out there.This is Photoshop's version of Lorem Ipsum. Proin gravida nibh velit it’s a cold world out there.
+                        button.hero__button Shop Now
+
+        p(style="width: 100px") Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere et quas totam facilis sequi! Accusamus quam culpa pariatur nemo quia amet, dolor iste ratione eius repellendus voluptas eaque totam, magni temporibus? Corporis at nisi rem, enim maxime ducimus? In dolorum explicabo fuga quisquam dolor qui tempora commodi ab dolorem! Reprehenderit distinctio cupiditate, totam error placeat unde quo nulla modi facilis fugit sunt veniam accusamus, dolor molestias. Inventore debitis quasi voluptas adipisci earum esse, ex ipsum neque reiciendis maxime modi ea ullam aliquam animi asperiores, eos, ad mollitia natus fugiat? Quas et vitae aut tempore ducimus. Vero, labore. Minus, incidunt voluptatem?
+        script(src="js/main.js")
