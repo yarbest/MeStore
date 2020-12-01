@@ -58,6 +58,8 @@
     &__greeting
         margin-right: 85px
         font-weight: 500
+        animation-name: bounceInUp
+        animation-duration: 1s
     &__email-block
     &__email
         font-weight: 700
@@ -86,6 +88,21 @@
         display: flex
         height: 100%
     &__item
+        // animation-name: bounceInUp
+        animation-duration: 0.7s
+        &:nth-child(1)
+            animation-delay: 0.2s
+        &:nth-child(2)
+            animation-delay: 0.4s
+        &:nth-child(3)
+            animation-delay: 0.6s
+        &:nth-child(4)
+            animation-delay: 0.8s
+        &:nth-child(5)
+            animation-delay: 1s
+        &:nth-child(6)
+            animation-delay: 1.2s
+            
         &:not(:last-child)
             margin-right: 15px
         // height: 100%
@@ -178,13 +195,20 @@
     .header-nav
         // margin-right: 20px
         position: absolute
+        top: 117px
         left: 0
-        bottom: -59px
+        // bottom: -59px
+        width: 100%
         background-color: #ffffffb4
+        border-top: 1px solid #3f3e3e
+        // transform: translateY(100%)
         transform: translateX(-100%)
         transition: 0.5s ease
         &_active
             transform: translateX(0)
+        &__list
+            flex-wrap: wrap
+            justify-content: center
 
 @media (max-width: 767px)
     .header
@@ -192,13 +216,20 @@
             font-size: 1.4rem
         &__greeting
             margin-right: 10px
-    .header-nav
-        &__list
-            flex-wrap: wrap
-            justify-content: center
+
+
+// @media (max-width: 575px)
+//     .header-nav
+//         width: 100%
+
 
 @media (max-width: 480px)
     .header
         &__top
             flex-direction: column
             padding: 5px 0
+    .header-nav
+        padding: 10px 20px
+        top: 105px
+        &__link
+            padding: 0

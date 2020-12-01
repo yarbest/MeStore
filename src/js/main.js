@@ -19,9 +19,21 @@ if (window.matchMedia("(max-width: 991px)").matches) {
 let toggleSidebar = document.querySelector(".header__toggle-sidebar");
 let sidebar = document.querySelector(".header-nav ");
 let body = document.querySelector("body");
+let headerNavItem = document.querySelectorAll(".header-nav__item");
 
 toggleSidebar.addEventListener("click", () => {
     sidebar.classList.toggle("header-nav_active");
+    headerNavItem.forEach((element) => {
+        element.classList.toggle("animate__animated");
+        element.classList.toggle("animate__backInDown");
+    });
+
     // body.classList.toggle("lock-scroll");
 });
+
+if (sidebar.clientHeight > "58") {
+    // sidebar.style.bottom = "-118px";
+}
+console.log(sidebar.offsetHeight);
+
 // Открытие меню----------------------------------------------------------------------------

@@ -17,7 +17,7 @@ html(lang="ru")
             .container
                 .header__body
                     .header__top
-                        p.header__greeting  Добро пожаловать в MeShop
+                        p(class="header__greeting wow") Добро пожаловать в MeShop
                         .header__email-block
                             span Email: 
                             a.header__email(href="mailto:free@psdfreebies.com") free@psdfreebies.com
@@ -27,15 +27,15 @@ html(lang="ru")
                         a.header__logo(href="") MeStore
                         nav.header__nav.header-nav
                             ul.header-nav__list
-                                li.header-nav__item 
+                                li(class="header-nav__item") 
                                     a.header-nav__link(href="") Главная
-                                li.header-nav__item 
+                                li(class="header-nav__item") 
                                     a.header-nav__link(href="") Магазин
-                                li.header-nav__item 
+                                li(class="header-nav__item") 
                                     a.header-nav__link(href="") Товары
-                                li.header-nav__item
+                                li(class="header-nav__item") 
                                     a.header-nav__link(href="") Блог
-                                li.header-nav__item
+                                li(class="header-nav__item") 
                                     a.header-nav__link(href="") Портфолио
 
                         input(type="checkbox" id="checkbox2" class="checkbox2 visuallyHidden")
@@ -72,4 +72,8 @@ html(lang="ru")
                         button.hero__button Shop Now
 
         p(style="width: 100px") Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere et quas totam facilis sequi! Accusamus quam culpa pariatur nemo quia amet, dolor iste ratione eius repellendus voluptas eaque totam, magni temporibus? Corporis at nisi rem, enim maxime ducimus? In dolorum explicabo fuga quisquam dolor qui tempora commodi ab dolorem! Reprehenderit distinctio cupiditate, totam error placeat unde quo nulla modi facilis fugit sunt veniam accusamus, dolor molestias. Inventore debitis quasi voluptas adipisci earum esse, ex ipsum neque reiciendis maxime modi ea ullam aliquam animi asperiores, eos, ad mollitia natus fugiat? Quas et vitae aut tempore ducimus. Vero, labore. Minus, incidunt voluptatem?
+        script(src="js/wow.min.js")
+        script
+            | new WOW().init();
+            
         script(src="js/main.js")
