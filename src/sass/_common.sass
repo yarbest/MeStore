@@ -33,6 +33,12 @@
     font-style: normal
     font-weight: 800    
 
+=cut-text ($number-of-rows)
+    display: -webkit-box 
+    -webkit-line-clamp: $number-of-rows
+    -webkit-box-orient: vertical
+    text-overflow: ellipsis
+    overflow: hidden
 
 html
     font-size: 62.5%
@@ -42,6 +48,9 @@ body
     font-family: "Montserrat"
     font-size: 1.6rem
     font-weight: 500
+    background-image: url(../img/bg-main.jpg)
+    background-size: cover
+
     
 button  
     background-color: transparent
@@ -51,6 +60,34 @@ button
 .container
     max-width: 1170px
     margin: 0 auto
+
+.btn-shop
+    display: block
+    padding: 12px 27px
+    font-size: 2rem
+    font-weight: 800
+    background-image: linear-gradient(to right, #f9236f 0%, #f92346 100%)
+    color: #ffffff
+
+.ratings
+    max-width: 95px
+    &__star
+        width: 15px
+        height: 15px
+        &_on
+        &_off
+
+.price-wrap
+    display: flex
+    align-items: center
+    &__old
+        margin-right: 8px
+        text-decoration: line-through
+        color: #6b6b6b
+    &__current
+        font-weight: 800
+        font-size: 1.8rem
+            
 
 @media ( max-width: 1199px )
     .container

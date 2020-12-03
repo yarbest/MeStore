@@ -13,7 +13,7 @@ shippingClose.addEventListener("click", closeShipping);
 if (window.matchMedia("(max-width: 991px)").matches) {
     closeShipping();
 }
-// Закрытие поля с доставкой -------------------------------------------------------------
+// /Закрытие поля с доставкой -------------------------------------------------------------
 
 // Открытие меню----------------------------------------------------------------------------
 let toggleSidebar = document.querySelector(".header__toggle-sidebar");
@@ -35,5 +35,42 @@ if (sidebar.clientHeight > "58") {
     // sidebar.style.bottom = "-118px";
 }
 console.log(sidebar.offsetHeight);
+// /Открытие меню----------------------------------------------------------------------------
 
-// Открытие меню----------------------------------------------------------------------------
+$(document).ready(function () {
+    //preloader------------------------------------------------------------------
+    // $("#cube-loader").fadeOut();
+    ///preloader------------------------------------------------------------------
+
+    //slider------------------------------------------------------------------
+    $(".featured-slider").slick({
+        prevArrow: $(".slider-arrows__prev"), //назначаем кастомные стрелки на роль переключателей слайдера
+        nextArrow: $(".slider-arrows__next"),
+        infinite: false,
+        dots: true,
+        slidesToShow: 4,
+        slidesToScroll: 2,
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 2,
+                },
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                },
+            },
+            {
+                breakpoint: 481,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                },
+            },
+        ],
+    });
+    // /slider------------------------------------------------------------------
+});

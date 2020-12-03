@@ -1,8 +1,89 @@
 @import _reset.scss
 @import _button-sidebar.scss
 @import _animate.scss
+@import _slick.scss
+
 
 @import _common
 @import blocks/_header 
 @import blocks/_hero
+@import blocks/_featured
 
+.main
+    
+    &__body
+        position: relative
+        z-index: 100
+        top: -55px
+        background-color: #fff
+    &__details // блок с иконками
+        padding: 0 15px
+        margin-bottom: 45px
+    &__genders
+        padding: 0 30px
+        margin-bottom: 105px
+    &__featured
+
+
+.main-details
+    display: flex
+    justify-content: space-between
+    
+    &__detail
+        flex-basis: 33.333%
+        position: relative
+        top: -65px
+
+.main-detail
+
+    display: flex
+    flex-direction: column
+    align-items: center
+    &__icon-wrap
+        padding: 40px
+        border-radius: 50%
+        background-color: #fff
+    &__icon
+        width: 40px
+        height: 40px
+    &__title
+        margin-top: -17px
+        margin-bottom: 8px
+        font-size: 3rem
+        font-weight: 800
+        text-align: center
+    &__description
+
+.genders
+    display: flex
+    justify-content: space-between
+    &__gender
+        padding: 45px 45px 35px 45px
+        flex-basis: 48.3%
+    &__female
+        background-image: url(../img/genders/female.jpg)
+        background-repeat: no-repeat
+        background-position: right top
+    &__male
+        background-image: url(../img/genders/male.jpg)
+        background-repeat: no-repeat
+        background-position: right top
+
+.gender
+    background-color: #d7eff9
+    &__title
+        margin-bottom: 13px
+        font-weight: 800
+        letter-spacing: -0.35rem
+        line-height: 4rem
+        font-size: 4.8rem
+        color: #222222
+        
+    &__title-accent
+        color: #f9236f
+        letter-spacing: -0.35rem
+    &__description
+        margin-bottom: 25px
+        line-height: 2.2rem
+        +cut-text(2)
+        max-width: 230px
