@@ -1,14 +1,14 @@
 .hero
     position: relative
-    height: 100vh
+    border: 1px solid #000
     background-image: url(../img/bg-hero.png)
     background-size: cover
     background-repeat: no-repeat
-    background-attachment: fixed
+    height: auto
     background-color: #bae9ff
     &::after
         position: absolute
-        top: 0
+        top: 190px
         right: 0
         content: ''
         height: 100%
@@ -16,52 +16,61 @@
         background-image: url(../img/hero-woman.png)
         background-size: contain   
         background-repeat: no-repeat
-        background-position: right top
-        background-attachment: fixed
+        // background-position: right top
+        border: 1px solid #000
     &__body
         position: relative
         z-index: 100
         display: flex
         align-items: center
-        height: 100vh
+        padding: 455px 0 380px
     &__text
-        max-width: 500px
-        margin-left: 70px
-        margin-bottom: -150px
+        max-width: 600px
+        margin-left: 66px
     &__title
-        margin-bottom: 5px
+        // margin-bottom: -3px
         font-weight: 800
-        letter-spacing: -1.18px
-        line-height: 5rem
-        font-size: 6rem
+        letter-spacing: -0.95rem
+        line-height: 8.7rem
+        font-size: 12.1rem
         text-transform: uppercase
         text-align: center
         color: #222222
     &__title-accent
         color: #f9236f
+        letter-spacing: -0.95rem
+
     &__year
         display: flex
         justify-content: space-between
-        max-width: 270px
+        max-width: 400px
         margin: 0 auto
-        margin-bottom: 20px
+        margin-top: -4px
+        margin-bottom: 15px
         color: #222222
-        font-size: 3.5rem 
+        font-size: 5rem 
+        letter-spacing: 9.3rem
+        padding-left: 5px
         font-weight: 800
     &__description
-        margin-bottom: 30px
+        margin-bottom: 50px
         color: #494949
         line-height: 24px
         text-align: center
     &__button
         display: block
         margin: 0 auto
-        padding: 15px 20px
+        padding: 12px 27px
         font-size: 2rem
         font-weight: 800
         background-image: linear-gradient(to right, #f9236f 0%, #f92346 100%)
         color: #ffffff
 
+@media (min-width: 1200px)
+    .hero
+        // background-attachment: fixed
+        &::after
+            // background-attachment: fixed
 @media (max-width: 1199px)
     .hero
         &::after
@@ -93,7 +102,7 @@
         &__year
             font-size: 2rem
             max-width: 150px
-    
+
 
 @media (max-width: 480px)
     .hero   

@@ -4291,7 +4291,7 @@ button {
   position: absolute;
   top: 0;
   left: 0;
-  opacity: 0.25;
+  opacity: 0.4;
   content: '';
   display: block;
   width: 100%;
@@ -4301,32 +4301,35 @@ button {
 }
 
 .shipping__body {
-  padding: 10px 0;
+  padding: 22px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .shipping__text {
   color: #ffffff;
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: 700;
 }
 
 .shipping__close {
   background-color: #fff;
   border-radius: 50%;
-  padding: 5px 8px;
+  padding: 9px 12px;
   font-weight: 800;
   cursor: pointer;
 }
 
 .header {
   position: absolute;
-  top: 46px;
+  top: 76px;
   left: 0;
   z-index: 101;
   width: 100%;
@@ -4364,8 +4367,8 @@ button {
 .header__greeting {
   margin-right: 85px;
   font-weight: 500;
-  -webkit-animation-name: bounceInUp;
-          animation-name: bounceInUp;
+  -webkit-animation-name: fadeInLeft;
+          animation-name: fadeInLeft;
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
 }
@@ -4387,6 +4390,12 @@ button {
   margin-right: auto;
   font-weight: 800;
   font-size: 2.6rem;
+  -webkit-animation-name: fadeInLeft;
+          animation-name: fadeInLeft;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
 }
 
 .header__nav {
@@ -4635,17 +4644,17 @@ button {
 
 .hero {
   position: relative;
-  height: 100vh;
+  border: 1px solid #000;
   background-image: url(../img/bg-hero.png);
   background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  height: auto;
   background-color: #bae9ff;
 }
 
 .hero::after {
   position: absolute;
-  top: 0;
+  top: 190px;
   right: 0;
   content: '';
   height: 100%;
@@ -4653,8 +4662,7 @@ button {
   background-image: url(../img/hero-woman.png);
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: right top;
-  background-attachment: fixed;
+  border: 1px solid #000;
 }
 
 .hero__body {
@@ -4666,21 +4674,19 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 100vh;
+  padding: 455px 0 380px;
 }
 
 .hero__text {
-  max-width: 500px;
-  margin-left: 70px;
-  margin-bottom: -150px;
+  max-width: 600px;
+  margin-left: 66px;
 }
 
 .hero__title {
-  margin-bottom: 5px;
   font-weight: 800;
-  letter-spacing: -1.18px;
-  line-height: 5rem;
-  font-size: 6rem;
+  letter-spacing: -0.95rem;
+  line-height: 8.7rem;
+  font-size: 12.1rem;
   text-transform: uppercase;
   text-align: center;
   color: #222222;
@@ -4688,6 +4694,7 @@ button {
 
 .hero__title-accent {
   color: #f9236f;
+  letter-spacing: -0.95rem;
 }
 
 .hero__year {
@@ -4697,16 +4704,19 @@ button {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  max-width: 270px;
+  max-width: 400px;
   margin: 0 auto;
-  margin-bottom: 20px;
+  margin-top: -4px;
+  margin-bottom: 15px;
   color: #222222;
-  font-size: 3.5rem;
+  font-size: 5rem;
+  letter-spacing: 9.3rem;
+  padding-left: 5px;
   font-weight: 800;
 }
 
 .hero__description {
-  margin-bottom: 30px;
+  margin-bottom: 50px;
   color: #494949;
   line-height: 24px;
   text-align: center;
@@ -4715,7 +4725,7 @@ button {
 .hero__button {
   display: block;
   margin: 0 auto;
-  padding: 15px 20px;
+  padding: 12px 27px;
   font-size: 2rem;
   font-weight: 800;
   background-image: -webkit-gradient(linear, left top, right top, from(#f9236f), to(#f92346));

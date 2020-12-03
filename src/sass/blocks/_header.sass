@@ -13,7 +13,7 @@
         position: absolute
         top: 0
         left: 0
-        opacity: 0.25
+        opacity: 0.4
         content: ''
         display: block
         width: 100%
@@ -21,23 +21,24 @@
         background-image: url(../img/bg-shipping.jpg)
         pointer-events: none
     &__body
-        padding: 10px 0
+        padding: 22px 0
         display: flex
         justify-content: space-between
+        align-items: center
     &__text
         color: #ffffff
-        font-size: 1.8rem
+        font-size: 2rem
         font-weight: 700
     &__close
         background-color: #fff
         border-radius: 50%
-        padding: 5px 8px
+        padding: 9px 12px
         font-weight: 800
         cursor: pointer
 
 .header
     position: absolute
-    top: 46px
+    top: 76px
     left: 0
     z-index: 101
     width: 100%
@@ -58,7 +59,7 @@
     &__greeting
         margin-right: 85px
         font-weight: 500
-        animation-name: bounceInUp
+        animation-name: fadeInLeft
         animation-duration: 1s
     &__email-block
     &__email
@@ -70,6 +71,9 @@
         margin-right: auto
         font-weight: 800
         font-size: 2.6rem
+        animation-name: fadeInLeft
+        animation-duration: 1s
+        animation-delay: 0.2s
     &__nav
         margin-right: 15px
     &__search
