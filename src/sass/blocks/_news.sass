@@ -1,0 +1,145 @@
+.news
+    position: relative
+    z-index: 100
+    top: -115px
+    background-image: url(../img/news/bg-news.jpg)
+    background-size: cover
+    background-repeat: no-repeat
+    &__body
+        padding: 130px 0 185px
+    &__title
+        margin-bottom: 11px
+        font-size: 2.6rem
+        font-weight: 800
+        text-align: center
+    &__subtitle
+        margin-bottom: 45px
+        text-align: center
+    &__items
+        display: flex
+        // flex-wrap: wrap
+        justify-content: center
+    &__item
+        flex-basis: 30.9%
+        margin-right: 40px
+        &:last-child
+            margin-right: 0
+
+.news-item
+    display: flex
+    flex-direction: column
+    background-color: #fff
+    &__image-wrap
+        width: 100%
+        overflow: hidden
+    &__image
+        display: block
+        max-width: 100%
+        height: auto
+    &__link
+        display: block
+    
+    &__text
+        padding: 34px 40px 25px 30px
+    &__title
+        margin-bottom: 2px
+        font-weight: 800
+        color: #515151
+        font-size: 1.8rem
+    &__subtitle
+        margin-bottom: 15px
+        color: #a8a8a8
+        font-size: 1.4rem
+    &__description
+        margin-bottom: 25px
+        font-size: 1.4rem
+        color: #494949
+        line-height: 22px
+    &__footer
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin-top: auto
+    &__button
+        font-size: 1.3rem
+        padding: 8px 13px
+    &__actions
+        display: flex
+    &__icon-wrap 
+        &:first-child
+            position: relative
+            margin-right: 25px
+            &::after
+                position: absolute
+                content: ''
+                width: 2px
+                height: 100%
+                top: 0
+                right: -12.5px
+                background-color: #b9b9b9
+                pointer-events: none
+    &__icon
+        display: flex
+        width: 15px
+        height: 15px
+        fill: #f92349
+
+
+@media (min-width: 1200px)
+    .news-item
+        &__image
+            transition: 0.5s ease
+        &__image-wrap
+            position: relative
+            overflow: hidden
+            &::after
+                position: absolute
+                content: ''
+                width: 0
+                height: 0
+                left: 50%
+                top: 50%
+                pointer-events: none
+                transition: 0.5s ease
+            &:hover
+                &::after
+                    top: 0
+                    left: 0
+                    width: 100%
+                    height: 100%
+                    background-color: #f9236e2c
+                .news-item__image
+                    transform: scale(1.1)
+
+        &__title
+            transition: 0.3s ease
+            &:hover
+                color: #f92346
+
+        &__icon
+            transition: 0.4s ease
+        &__icon-wrap
+            position: relative
+            z-index: 1
+            transition: 0.4s ease
+            padding: 5px
+            padding-bottom: 4px
+            &::before
+                content: ''
+                width: 0
+                height: 0
+                position: absolute
+                left: 50%
+                top: 50%
+                border-radius: 50% 
+                background-color: #f9236f
+                transition: 0.4s ease
+            &:hover
+                &::before
+                    top: 0
+                    left: 0
+                    width: 100%
+                    height: 100%
+                .news-item__icon
+                    position: relative
+                    fill: #fff

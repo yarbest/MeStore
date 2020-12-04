@@ -4342,6 +4342,13 @@ h6 {
   font-weight: 800;
 }
 
+@font-face {
+  font-family: "BebasNeue";
+  src: url("../fonts/BebasNeue/BebasNeueBold.woff") format("woff"), url("../fonts/BebasNeue/BebasNeueBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -4990,6 +4997,7 @@ button {
 
 .slider-arrows__arrow {
   padding: 5px 0;
+  border: 1px solid transparent;
   border-radius: 50%;
   background-color: #f92357;
   cursor: pointer;
@@ -5071,12 +5079,295 @@ button {
   .featured-slide__title:hover {
     color: #f92346;
   }
+  .slider-arrows__arrow:not(.slick-disabled) {
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+  }
+  .slider-arrows__arrow:not(.slick-disabled) span {
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+  }
+  .slider-arrows__arrow:not(.slick-disabled):hover {
+    background-color: #fff;
+    border: 1px solid #f92357;
+  }
+  .slider-arrows__arrow:not(.slick-disabled):hover span {
+    border-right-color: #f92357;
+  }
+}
+
+.news {
+  position: relative;
+  z-index: 100;
+  top: -115px;
+  background-image: url(../img/news/bg-news.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.news__body {
+  padding: 130px 0 185px;
+}
+
+.news__title {
+  margin-bottom: 11px;
+  font-size: 2.6rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+.news__subtitle {
+  margin-bottom: 45px;
+  text-align: center;
+}
+
+.news__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.news__item {
+  -ms-flex-preferred-size: 30.9%;
+      flex-basis: 30.9%;
+  margin-right: 40px;
+}
+
+.news__item:last-child {
+  margin-right: 0;
+}
+
+.news-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #fff;
+}
+
+.news-item__image-wrap {
+  width: 100%;
+  overflow: hidden;
+}
+
+.news-item__image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.news-item__link {
+  display: block;
+}
+
+.news-item__text {
+  padding: 34px 40px 25px 30px;
+}
+
+.news-item__title {
+  margin-bottom: 2px;
+  font-weight: 800;
+  color: #515151;
+  font-size: 1.8rem;
+}
+
+.news-item__subtitle {
+  margin-bottom: 15px;
+  color: #a8a8a8;
+  font-size: 1.4rem;
+}
+
+.news-item__description {
+  margin-bottom: 25px;
+  font-size: 1.4rem;
+  color: #494949;
+  line-height: 22px;
+}
+
+.news-item__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: auto;
+}
+
+.news-item__button {
+  font-size: 1.3rem;
+  padding: 8px 13px;
+}
+
+.news-item__actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.news-item__icon-wrap:first-child {
+  position: relative;
+  margin-right: 25px;
+}
+
+.news-item__icon-wrap:first-child::after {
+  position: absolute;
+  content: '';
+  width: 2px;
+  height: 100%;
+  top: 0;
+  right: -12.5px;
+  background-color: #b9b9b9;
+  pointer-events: none;
+}
+
+.news-item__icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 15px;
+  height: 15px;
+  fill: #f92349;
+}
+
+@media (min-width: 1200px) {
+  .news-item__image {
+    -webkit-transition: 0.5s ease;
+    -o-transition: 0.5s ease;
+    transition: 0.5s ease;
+  }
+  .news-item__image-wrap {
+    position: relative;
+    overflow: hidden;
+  }
+  .news-item__image-wrap::after {
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 0;
+    left: 50%;
+    top: 50%;
+    pointer-events: none;
+    -webkit-transition: 0.5s ease;
+    -o-transition: 0.5s ease;
+    transition: 0.5s ease;
+  }
+  .news-item__image-wrap:hover::after {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f9236e2c;
+  }
+  .news-item__image-wrap:hover .news-item__image {
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  .news-item__title {
+    -webkit-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    transition: 0.3s ease;
+  }
+  .news-item__title:hover {
+    color: #f92346;
+  }
+  .news-item__icon {
+    -webkit-transition: 0.4s ease;
+    -o-transition: 0.4s ease;
+    transition: 0.4s ease;
+  }
+  .news-item__icon-wrap {
+    position: relative;
+    z-index: 1;
+    -webkit-transition: 0.4s ease;
+    -o-transition: 0.4s ease;
+    transition: 0.4s ease;
+    padding: 5px;
+    padding-bottom: 4px;
+  }
+  .news-item__icon-wrap::before {
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border-radius: 50%;
+    background-color: #f9236f;
+    -webkit-transition: 0.4s ease;
+    -o-transition: 0.4s ease;
+    transition: 0.4s ease;
+  }
+  .news-item__icon-wrap:hover::before {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .news-item__icon-wrap:hover .news-item__icon {
+    position: relative;
+    fill: #fff;
+  }
+}
+
+.sale__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.sale__banner {
+  -ms-flex-preferred-size: 310px;
+      flex-basis: 310px;
+  padding: 25px 30px;
+}
+
+.banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #f9234a;
+}
+
+.banner__title-wrap {
+  padding: 55px 25px;
+  border: 6px solid #fff;
+  font-family: BebasNeue;
+  color: #ffffff;
+}
+
+.banner__title {
+  font-size: 6.8rem;
+  line-height: 5.5rem;
+  text-align: center;
+}
+
+.banner__title-accent {
+  font-size: 12.8rem;
+  line-height: 9.5rem;
 }
 
 .main__body {
   position: relative;
-  z-index: 100;
+  z-index: 101;
   top: -55px;
+  padding-bottom: 40px;
   background-color: #fff;
 }
 
