@@ -5127,19 +5127,16 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  border: 1px solid #000;
+  margin: 0 -20px;
 }
 
 .news__item {
-  -ms-flex-preferred-size: 30.9%;
-      flex-basis: 30.9%;
-  margin-right: 40px;
-}
-
-.news__item:last-child {
-  margin-right: 0;
+  -ms-flex-preferred-size: calc(33.333% - 40px);
+      flex-basis: calc(33.333% - 40px);
+  margin: 0 20px;
 }
 
 .news-item {
@@ -5343,6 +5340,9 @@ button {
       -ms-flex-direction: column;
           flex-direction: column;
   background-color: #f9234a;
+  background-image: url(../img/sale-brands/bg-banner.png);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .banner__title-wrap {
