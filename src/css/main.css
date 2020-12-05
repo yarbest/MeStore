@@ -5101,7 +5101,7 @@ button {
 .news {
   position: relative;
   z-index: 100;
-  top: -115px;
+  margin-top: -115px;
   background-image: url(../img/news/bg-news.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -5322,7 +5322,7 @@ button {
 .sale {
   position: relative;
   z-index: 100;
-  top: -220px;
+  margin-top: -60px;
 }
 
 .sale__body {
@@ -5513,7 +5513,7 @@ button {
 .main__body {
   position: relative;
   z-index: 101;
-  top: -55px;
+  margin-top: -55px;
   padding-bottom: 40px;
   background-color: #fff;
 }
