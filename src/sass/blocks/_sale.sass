@@ -48,6 +48,7 @@
 
 .sale-brand
     display: flex
+    align-items: flex-start
     &__image-wrap
         margin-right: 30px
         max-width: 91px
@@ -136,6 +137,30 @@
 @media (min-width: 1200px)
 
     .sale-brand
+        &__image
+            transition: 0.5s ease
+            // display: block
+        &__image-wrap
+            position: relative
+            overflow: hidden
+            &::after
+                position: absolute
+                content: ''
+                width: 0
+                height: 0
+                left: 50%
+                top: 50%
+                pointer-events: none
+                transition: 0.5s ease
+            &:hover
+                &::after
+                    top: 0
+                    left: 0
+                    width: 100%
+                    height: 100%
+                    background-color: #f9236e2c
+                .sale-brand__image
+                    transform: scale(1.1)
         &__title
             transition: 0.3s ease
             &:hover
