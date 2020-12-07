@@ -6260,12 +6260,12 @@ button {
 
 @media (max-width: 575px) {
   .footer__body {
-    padding: 50px 30px;
+    padding: 50px 0 30px;
   }
   .footer__contacts {
     margin-bottom: 30px;
-    -ms-flex-preferred-size: 70%;
-        flex-basis: 70%;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
   }
   .contacts {
     display: -webkit-box;
@@ -6278,9 +6278,41 @@ button {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    text-align: center;
+    border: 1px solid #000;
+  }
+  .socials {
+    border: 1px solid #000;
+    -ms-flex-item-align: stretch;
+        -ms-grid-row-align: stretch;
+        align-self: stretch;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
   }
   .socials__title {
     text-align: center;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+  .socials__inner {
+    margin: 0 auto;
+  }
+  .socials__title {
+    text-align: center;
+  }
+}
+
+@media (max-width: 380px) {
+  .contacts {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .contacts__item {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    text-align: left;
   }
 }
 
