@@ -198,6 +198,8 @@
         &__body
             flex-wrap: wrap
             align-items: flex-start
+            &::after
+                display: none
         &__brands
             flex-basis: 100%
             padding: 0
@@ -232,12 +234,51 @@
     .banner
         &__title-wrap
             padding: 10px
+        &__title-accent
+            &:nth-of-type(1)
+                word-spacing: 999px
 
 @media (max-width: 836px)
     .sale
         &__brands
-            justify-content: center
+            justify-content: space-evenly
 
+
+@media (max-width: 767px)
+    .sale
+        margin-bottom: 30px
+    .banner
+        &__title-accent
+            &:nth-of-type(1)
+                word-spacing: 999px
+    .search
+        padding-left: 10px
+        padding-right: 10px
+
+    .partners
+        display: none
+
+@media (max-width: 575px)
+    .sale
+        &__search
+            padding: 30px 10px
+@media (max-width: 480px)
+
+    .sale
+        &__brands-title
+            font-size: 2.2rem
+    .banner
+        &__title
+            word-spacing: 999px
+    .search
+        &__title
+            font-size: 2.2rem
+        &__form
+            flex-wrap: wrap
+            justify-content: center
+        &__input
+            margin-bottom: 20px
+            flex-basis: 100%
 
 @media (max-width: 575px)
     .sale
@@ -264,3 +305,6 @@
             grid-template-columns: 1fr
         &__brands-title
             grid-column: 1/2
+        &__brand
+            padding-bottom: 10px
+            margin-bottom: 30px

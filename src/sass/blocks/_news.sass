@@ -20,7 +20,6 @@
         display: flex
         flex-wrap: wrap
         // justify-content: center
-        border: 1px solid #000
         margin: 0 -20px
     &__item
         // flex-basis: 30.9%
@@ -153,3 +152,68 @@
                 .news-item__icon
                     position: relative
                     fill: #fff
+
+@media (max-width: 991px)
+    .news-item
+        &__description
+            +cut-text(4)
+
+@media (max-width: 850px) and (min-width: 767px)
+
+    .news-item
+        &__description
+            margin-bottom: 10px
+        &__footer
+            display: flex
+            flex-wrap: wrap
+            justify-content: center
+
+        &__button  
+            flex-basis: 90%
+            margin-top: 15px
+            order: 1
+        &__icon
+            width: 20px
+            height: 20px
+
+@media (max-width: 767px)
+    .news
+        &__body
+            padding-bottom: 130px
+        &__item
+            flex-basis: calc(50% - 40px)
+            margin-bottom: 30px
+    .news-item
+        &__icon
+            width: 20px
+            height: 20px
+@media (max-width: 575px)
+    .news
+        &__body
+            padding-bottom: 130px
+        
+        &__items
+            justify-content: center
+        &__item
+            flex-basis: calc(90% - 40px)
+            // margin-bottom: 30px
+    .news-item
+        &__image-wrap
+            display: flex
+            justify-content: center
+        &__text 
+            padding: 30px 20px
+        &__icon
+            width: 25px
+            height: 25px
+@media (max-width: 480px)
+    .news
+        &__title
+            font-size: 2.2rem
+        &__item
+            flex-basis: calc(100% - 40px)
+
+@media (max-width: 360px)
+    .news
+        &__body
+            padding-bottom: 100px

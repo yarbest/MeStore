@@ -98,7 +98,16 @@
     .main-detail
         &__title
             font-size: 2.2rem
+
+    .gender
+        &__description
+            color: #fff
+            background-color: #0000000a
+
 @media (max-width: 991px)
+    .main
+        &__genders
+            padding: 0 15px
     .main-details
         flex-wrap: wrap
         &__detail
@@ -106,11 +115,14 @@
     .main-detail
         &__icon-wrap
             padding: 30px
-    
+
     .genders
         flex-wrap: wrap
 
 @media (max-width: 890px)
+    .main
+        &__details
+            margin-bottom: 30px
     .main-details
         &__detail
             padding: 0 10px
@@ -121,9 +133,22 @@
 
 
 @media (max-width: 767px)
+    .main
+        &__genders
+            margin-bottom: 40px
     .main-detail
         &__title
             font-size: 1.8rem
+
+    .genders
+        &__gender
+            flex-basis: 100%
+            margin-bottom: 40px
+    .gender
+        &__description
+            color: #000000
+            background-color: transparent
+
 
 @media (max-width: 575px)
     .main-details
@@ -138,6 +163,10 @@
             height: 30px
         &__description
             font-size: 1.4rem
+    .gender
+        &__description
+            color: #fff
+            background-color: #00000018
 
 @media (max-width: 480px)
     .main-details
@@ -148,6 +177,18 @@
     .main-detail
         &__description
             font-size: 1.4rem
+    
+    .genders
+        &__gender
+            padding: 20px
+        &__female, &__male
+            background-position: right -70px top
+    .gender
+        &__title
+            font-size: 3.5rem
+            line-height: 2.9rem
+        &__button
+            padding: 5px 10px
 
 @media (max-width: 380px)
     .main-details
