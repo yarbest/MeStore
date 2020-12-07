@@ -529,24 +529,87 @@ html(lang="ru")
             .container
                 .footer__body
                     .footer__contacts.contacts
-                        .contacts__address.contacts__item.address
+                        p.contacts__title Contacts:
+
+                        a.contacts__address.contacts__item.address.footer-hover(target="_blank" href="https://www.google.com/maps/place/Rathaus+Hall/@40.7384143,-73.8156904,17z/data=!4m13!1m7!3m6!1s0x89c260618039000d:0x4e4216fa03a650cf!2zTWFpbiBTdCwgUXVlZW5zLCBOWSwg0KHQqNCQ!3b1!8m2!3d40.7359744!4d-73.8250952!3m4!1s0x89c2605dc72ddd95:0x2c3e99feda852fdb!8m2!3d40.7373887!4d-73.8165211")
                             svg.address__icon.contacts__icon
                                 use(xlink:href="img/icons/icons.svg#address")
-                            address.address__text 0123  Main Road, Your City, NY 123456
+                            address.contacts__text 0123  Main Road, Your City, NY 123456
                         
-                        .contacts__phone.contacts__item.phone
+                        a.contacts__phone.contacts__item.phone.footer-hover(href="tel:(000) 2345 - 6789")
                             svg.phone__icon.contacts__icon
                                 use(xlink:href="img/icons/icons.svg#phone")
-                            a.phone__text(href="tel:(000) 2345 - 6789") (000) 2345 - 6789
+                            p.contacts__text (000) 2345 - 6789
 
-                        .contacts__mail.contacts__item.mail
+                        a.contacts__mail.contacts__item.mail.footer-hover(href="mailto:(000) 2345 - 6789") 
                             svg.mail__icon.contacts__icon
                                 use(xlink:href="img/icons/icons.svg#envelope")
-                            a.mail__text(href="mailto:(000) 2345 - 6789")  info@me-store.com
+                            p.contacts__text info@me-store.com
 
                     .footer__socials.socials
+                        p.socials__title Follow us:
+                        
+                        .socials__inner
+                            a.socials__item.footer-hover(href="")
+                                svg.socials__icon
+                                    use(xlink:href="img/icons/icons.svg#google-plus")
+                                p.socials__text
+                                    span Google+
+
+                            a.socials__item.footer-hover(href="")
+                                svg.socials__icon
+                                    use(xlink:href="img/icons/icons.svg#pinterest")
+                                p.socials__text
+                                    span Pinterest
+
+                            a.socials__item.footer-hover(href="")
+                                svg.socials__icon
+                                    use(xlink:href="img/icons/icons.svg#vimeo")
+                                p.socials__text
+                                    span Vimeo
+
+                            a.socials__item.footer-hover(href="")
+                                svg.socials__icon
+                                    use(xlink:href="img/icons/icons.svg#facebook")
+                                p.socials__text
+                                    span Facebook
+
+                            a.socials__item.footer-hover(href="")
+                                svg.socials__icon
+                                    use(xlink:href="img/icons/icons.svg#twitter")
+                                p.socials__text
+                                    span Twitter
+
+                            a.socials__item.footer-hover(href="")
+                                svg.socials__icon
+                                    use(xlink:href="img/icons/icons.svg#rss")
+                                p.socials__text
+                                    span RSS
+
                     .footer__payment.payment
-            .rights © 2022 | All Rights Reserved.
+                        p.payment__title Payment Methods: 
+                        
+                        .payment__inner
+                            .payment__item(title="PayPal")
+                                svg.payment__icon
+                                    use(xlink:href="img/icons/icons.svg#paypal")
+
+                            .payment__item(title="MasterCard")
+                                svg.payment__icon
+                                    use(xlink:href="img/icons/icons.svg#mastercard")
+
+                            .payment__item(title="Visa")
+                                svg.payment__icon
+                                    use(xlink:href="img/icons/icons.svg#visa")
+
+                            .payment__item(title="Discover")
+                                svg.payment__icon
+                                    use(xlink:href="img/icons/icons.svg#discover")
+
+                            .payment__item(title="Diners-club")
+                                svg.payment__icon
+                                    use(xlink:href="img/icons/icons.svg#diners-club")
+                    p.footer__rights © 2022 | All Rights Reserved.
 
 
 
