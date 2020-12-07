@@ -7,10 +7,12 @@
     background-color: #bae9ff
     &::after
         position: absolute
-        top: 195px
+        // top: 195px
+        
+        top: calc(100vw - (100vw - 17.5%))
         right: 0
         content: ''
-        height: 83%
+        height: 82.5%
         width: 57%
         background-image: url(../img/hero-woman.png)
         background-size: contain   
@@ -22,6 +24,8 @@
         display: flex
         align-items: center
         padding: 455px 0 260px
+        // padding-top: calc(100vw - (100vw - 38%))
+        // padding-bottom: 260px
     &__text
         max-width: 600px
         margin-left: 66px
@@ -63,37 +67,96 @@
         // background-attachment: fixed
         &::after
             // background-attachment: fixed
+
+@media (max-width: 1400px)
+    .hero
+        &::after
+            height: 78.5%
+            top: calc(100vw - (100vw - 21.5%))
+            background-position: right bottom
+        &__body
+            padding: 350px 0 150px
+
 @media (max-width: 1199px)
     .hero
         &::after
             // background-position: right top
-
+        &__body
+            padding: 250px 0 150px
+        &__title
+            font-size: 9rem
+            line-height: 7rem
+        &__year
+            padding-left: 50px
+            font-size: 4rem
+            letter-spacing: 7.3rem
 @media (max-width: 991px)
     .hero
         &::after
-            // width: 70%
-
+            width: 50%
+            background-size: cover
+            background-position: left bottom
+        &__body
+            padding: 200px 0 150px
         &__text 
-            // max-width: 400px
+            display: flex
+            flex-direction: column
+            max-width: 450px
             margin-left: 0
+        &__title
+            font-size: 8rem
+            line-height: 6.7rem
+            letter-spacing: -0.5rem
+        &__title-accent
+            letter-spacing: -0.5rem
+        &__year
+            padding-left: 60
+            font-size: 3rem
+            letter-spacing: 5.3rem
+
 
 @media (max-width: 767px)
     .hero
         &::after    
+            // background-size: contain
             // background-position: right -120px top
+        &__body
+            padding: 150px 0 150px
+        &__text 
+            max-width: 450px
+            margin-left: 0
+        &__title
+            font-size: 6rem
+            line-height: 4.5rem
+            letter-spacing: -0.5rem
+        &__title-accent
+            letter-spacing: -0.5rem
+        &__year
+            margin-top: 5px
+            padding-left: 60
+            font-size: 3rem
+            letter-spacing: 4.3rem
+        &__description
+            margin-bottom: 20px
 
 
 
 @media (max-width: 575px)
     .hero
+        &::after    
+            // background-position: center bottom
         &__text
-            // max-width: 270px
+            max-width: 320px
         &__title
-            font-size: 4rem
+            font-size: 4.5rem
             line-height: 3.5rem
         &__year
+            padding: 0
+            letter-spacing: 10px
             font-size: 2rem
             max-width: 150px
+        &__description
+            font-size: 1.4rem
 
 
 @media (max-width: 480px)

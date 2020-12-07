@@ -58,6 +58,7 @@
         font-weight: 800
         text-align: center
     &__description
+        text-align: center
 
 .genders
     display: flex
@@ -92,3 +93,67 @@
         line-height: 2.2rem
         +cut-text(2)
         max-width: 230px
+
+@media (max-width: 1199px)
+    .main-detail
+        &__title
+            font-size: 2.2rem
+@media (max-width: 991px)
+    .main-details
+        flex-wrap: wrap
+        &__detail
+            top: -45px
+    .main-detail
+        &__icon-wrap
+            padding: 30px
+    
+    .genders
+        flex-wrap: wrap
+
+@media (max-width: 890px)
+    .main-details
+        &__detail
+            padding: 0 10px
+    .main-detail
+        &__title
+            word-spacing: 999px
+
+
+
+@media (max-width: 767px)
+    .main-detail
+        &__title
+            font-size: 1.8rem
+
+@media (max-width: 575px)
+    .main-details
+        &__detail
+            top: -35px
+            padding: 0 
+    .main-detail
+        &__icon-wrap
+            padding: 20px
+        &__icon
+            width: 30px
+            height: 30px
+        &__description
+            font-size: 1.4rem
+
+@media (max-width: 480px)
+    .main-details
+        justify-content: center
+        &__detail
+            flex-basis: 50%
+            padding: 0 10px
+    .main-detail
+        &__description
+            font-size: 1.4rem
+
+@media (max-width: 380px)
+    .main-details
+        &__detail
+            flex-basis: 100%
+            margin-bottom: 15px
+    .main-detail
+        &__title
+            word-spacing: normal

@@ -10,7 +10,7 @@ const closeShipping = () => {
 
 shippingClose.addEventListener("click", closeShipping);
 
-if (window.matchMedia("(max-width: 991px)").matches) {
+if (window.matchMedia("(max-width: 1199px)").matches) {
     closeShipping();
 }
 // /Закрытие поля с доставкой -------------------------------------------------------------
