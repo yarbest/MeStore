@@ -6279,10 +6279,8 @@ button {
         -ms-flex-align: center;
             align-items: center;
     text-align: center;
-    border: 1px solid #000;
   }
   .socials {
-    border: 1px solid #000;
     -ms-flex-item-align: stretch;
         -ms-grid-row-align: stretch;
         align-self: stretch;
