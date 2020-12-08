@@ -4344,7 +4344,7 @@ h6 {
 
 @font-face {
   font-family: "BebasNeue";
-  src: url("../fonts/BebasNeue/BebasNeueBold.woff") format("woff"), url("../fonts/BebasNeue/BebasNeueBold.ttf") format("truetype");
+  src: url("../fonts/BebasNeue/BebasNeueBold.woff2") format("woff2"), url("../fonts/BebasNeue/BebasNeueBold.woff") format("woff"), url("../fonts/BebasNeue/BebasNeueBold.ttf") format("truetype");
   font-style: normal;
   font-weight: 700;
 }
@@ -4382,6 +4382,14 @@ body {
 
 .no-webp .hero::after {
   background-image: url(../img/hero-woman.png);
+}
+
+.webp .news {
+  background-image: url(../img/news/bg-news.webp);
+}
+
+.no-webp .news {
+  background-image: url(../img/news/bg-news.jpg);
 }
 
 button {
@@ -5292,7 +5300,6 @@ button {
   position: relative;
   z-index: 100;
   margin-top: -60px;
-  background-image: url(../img/news/bg-news.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
