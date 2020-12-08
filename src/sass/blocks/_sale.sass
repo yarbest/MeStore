@@ -202,7 +202,8 @@
 @media (max-width: 1199px)
     .sale__brands_left, .sale__brands_right
         .sale-brand
-            animation-name: backInDown
+            animation-name: backInUp
+            
 
 @media (max-width: 991px)
     .sale
@@ -337,6 +338,9 @@
 
 
 @media (max-width: 380px)
+    .sale__brands_left, .sale__brands_right
+        .sale-brand
+            animation-delay: 0.1s !important
     .sale
         &__brands
             grid-template-columns: 1fr

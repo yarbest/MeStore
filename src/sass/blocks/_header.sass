@@ -9,6 +9,9 @@
     transition: 0.3s ease
     &_closed
         transform: translateY(-100%)
+        
+    &_d-none
+        display: none
     &::after
         position: absolute
         top: 0
@@ -93,19 +96,19 @@
         height: 100%
     &__item
         // animation-name: bounceInUp
-        animation-duration: 0.7s
+        animation-duration: 1
         &:nth-child(1)
-            animation-delay: 0.2s
+            animation-delay: 0.1s
         &:nth-child(2)
-            animation-delay: 0.4s
+            animation-delay: 0.2s
         &:nth-child(3)
-            animation-delay: 0.6s
+            animation-delay: 0.3s
         &:nth-child(4)
-            animation-delay: 0.8s
+            animation-delay: 0.4s
         &:nth-child(5)
-            animation-delay: 1s
+            animation-delay: 0.5s
         &:nth-child(6)
-            animation-delay: 1.2s
+            animation-delay: 0.6s
             
         &:not(:last-child)
             margin-right: 15px

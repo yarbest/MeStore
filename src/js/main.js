@@ -8,10 +8,15 @@ const closeShipping = () => {
     header.classList.add("header_top");
 };
 
+const closeShippingOnPhone = () => {
+    shipping.classList.add("shipping_d-none");
+    header.classList.add("header_top");
+};
+
 shippingClose.addEventListener("click", closeShipping);
 
 if (window.matchMedia("(max-width: 1199px)").matches) {
-    closeShipping();
+    closeShippingOnPhone();
 }
 // /Закрытие поля с доставкой -------------------------------------------------------------
 
