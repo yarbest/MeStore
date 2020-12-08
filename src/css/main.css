@@ -4361,6 +4361,22 @@ body {
   background-size: cover;
 }
 
+.webp .hero {
+  background-image: url(../img/bg-hero.webp);
+}
+
+.webp .hero::after {
+  background-image: url(../img/hero-woman.webp);
+}
+
+.no-webp .hero {
+  background-image: url(../img/bg-hero.png);
+}
+
+.no-webp .hero::after {
+  background-image: url(../img/hero-woman.png);
+}
+
 button {
   background-color: transparent;
   cursor: pointer;
@@ -4871,7 +4887,6 @@ button {
 
 .hero {
   position: relative;
-  background-image: url(../img/bg-hero.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-color: #bae9ff;
@@ -4884,7 +4899,6 @@ button {
   content: '';
   height: 82.5%;
   width: 57%;
-  background-image: url(../img/hero-woman.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center bottom;
@@ -6044,6 +6058,7 @@ button {
   background-image: url(../img/bg-footer.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  background-color: #f9235c;
   color: #ffffff;
 }
 
