@@ -44,6 +44,15 @@
     display: flex
     flex-direction: column
     align-items: center
+    animation-name: zoomInUp
+    animation-duration: 2s
+    // &:nth-child(1)
+    //     animation-delay: 0.2s
+    &:nth-child(2)
+        animation-delay: 0.2s
+    &:nth-child(3)
+        animation-delay: 0.4s
+
     &__icon-wrap
         padding: 40px
         border-radius: 50%
@@ -70,10 +79,14 @@
         background-image: url(../img/genders/female.jpg)
         background-repeat: no-repeat
         background-position: right top
+        animation-name: fadeInLeft
+        animation-duration: 1s
     &__male
         background-image: url(../img/genders/male.jpg)
         background-repeat: no-repeat
         background-position: right top
+        animation-name: fadeInRight
+        animation-duration: 1s
 
 .gender
     background-color: #d7eff9
@@ -94,15 +107,31 @@
         +cut-text(2)
         max-width: 230px
 
+
+
 @media (max-width: 1199px)
     .main-detail
+        animation-name: fadeInUp
+        animation-duration: 1s
+        &:nth-child(2)
+            animation-delay: 0.1s
+        &:nth-child(3)
+            animation-delay: 0.2s
         &__title
             font-size: 2.2rem
-
+    .genders
+        &__female
+            animation-name: backInUp
+            // animation-duration: 2s
+        &__male
+            animation-name: backInUp
+            // animation-duration: 2s
     .gender
         &__description
             color: #fff
             background-color: #0000000a
+
+
 
 @media (max-width: 991px)
     .main

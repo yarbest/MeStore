@@ -85,6 +85,8 @@
     background-image: url(../img/sale-brands/bg-banner.png)
     background-size: cover
     background-repeat: no-repeat
+    animation-name: zoomIn
+    animation-duration: 1s
     &__title-wrap
         padding: 55px 25px
         border: 5px solid #fff
@@ -142,6 +144,29 @@
     &__image
         max-width: 100%
 
+
+.sale__brands_left
+    .sale-brand
+        animation-name: fadeInLeft
+        animation-duration: 1s
+        &:nth-of-type(2)
+            animation-delay: 0.1s
+        &:nth-of-type(3)
+            animation-delay: 0.2s
+        &:nth-of-type(4)
+            animation-delay: 0.3s
+
+.sale__brands_right
+    .sale-brand
+        animation-name: fadeInRight
+        animation-duration: 1s
+        &:nth-of-type(2)
+            animation-delay: 0.1s
+        &:nth-of-type(3)
+            animation-delay: 0.2s
+        &:nth-of-type(4)
+            animation-delay: 0.3s
+
 @media (min-width: 1200px)
 
     .sale-brand
@@ -173,6 +198,11 @@
             transition: 0.3s ease
             &:hover
                 color: #f92346
+
+@media (max-width: 1199px)
+    .sale__brands_left, .sale__brands_right
+        .sale-brand
+            animation-name: backInDown
 
 @media (max-width: 991px)
     .sale

@@ -4938,6 +4938,10 @@ button {
   text-transform: uppercase;
   text-align: center;
   color: #222222;
+  -webkit-animation-name: flipInX;
+          animation-name: flipInX;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
 }
 
 .hero__title-accent {
@@ -5131,6 +5135,25 @@ button {
           align-items: center;
   -webkit-box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.1);
+  -webkit-animation-name: fadeInUp;
+          animation-name: fadeInUp;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+.featured-slide:nth-child(2) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.featured-slide:nth-child(3) {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+.featured-slide:nth-child(4) {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
 }
 
 .featured-slide__image-wrap {
@@ -5338,6 +5361,20 @@ button {
       -ms-flex-direction: column;
           flex-direction: column;
   background-color: #fff;
+  -webkit-animation-name: fadeInUp;
+          animation-name: fadeInUp;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+.news-item:nth-child(2) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.news-item:nth-child(3) {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
 }
 
 .news-item__image-wrap {
@@ -5738,6 +5775,10 @@ button {
   background-image: url(../img/sale-brands/bg-banner.png);
   background-size: cover;
   background-repeat: no-repeat;
+  -webkit-animation-name: zoomIn;
+          animation-name: zoomIn;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
 }
 
 .banner__title-wrap {
@@ -5822,6 +5863,50 @@ button {
   max-width: 100%;
 }
 
+.sale__brands_left .sale-brand {
+  -webkit-animation-name: fadeInLeft;
+          animation-name: fadeInLeft;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+.sale__brands_left .sale-brand:nth-of-type(2) {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+
+.sale__brands_left .sale-brand:nth-of-type(3) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.sale__brands_left .sale-brand:nth-of-type(4) {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+.sale__brands_right .sale-brand {
+  -webkit-animation-name: fadeInRight;
+          animation-name: fadeInRight;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+.sale__brands_right .sale-brand:nth-of-type(2) {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+
+.sale__brands_right .sale-brand:nth-of-type(3) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.sale__brands_right .sale-brand:nth-of-type(4) {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
 @media (min-width: 1200px) {
   .sale-brand__image {
     -webkit-transition: 0.5s ease;
@@ -5863,6 +5948,13 @@ button {
   }
   .sale-brand__title:hover {
     color: #f92346;
+  }
+}
+
+@media (max-width: 1199px) {
+  .sale__brands_left .sale-brand, .sale__brands_right .sale-brand {
+    -webkit-animation-name: backInDown;
+            animation-name: backInDown;
   }
 }
 
@@ -6392,6 +6484,20 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-animation-name: zoomInUp;
+          animation-name: zoomInUp;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+
+.main-detail:nth-child(2) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.main-detail:nth-child(3) {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
 }
 
 .main-detail__icon-wrap {
@@ -6436,12 +6542,20 @@ button {
   background-image: url(../img/genders/female.jpg);
   background-repeat: no-repeat;
   background-position: right top;
+  -webkit-animation-name: fadeInLeft;
+          animation-name: fadeInLeft;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
 }
 
 .genders__male {
   background-image: url(../img/genders/male.jpg);
   background-repeat: no-repeat;
   background-position: right top;
+  -webkit-animation-name: fadeInRight;
+          animation-name: fadeInRight;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
 }
 
 .gender {
@@ -6475,8 +6589,30 @@ button {
 }
 
 @media (max-width: 1199px) {
+  .main-detail {
+    -webkit-animation-name: fadeInUp;
+            animation-name: fadeInUp;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+  }
+  .main-detail:nth-child(2) {
+    -webkit-animation-delay: 0.1s;
+            animation-delay: 0.1s;
+  }
+  .main-detail:nth-child(3) {
+    -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s;
+  }
   .main-detail__title {
     font-size: 2.2rem;
+  }
+  .genders__female {
+    -webkit-animation-name: backInUp;
+            animation-name: backInUp;
+  }
+  .genders__male {
+    -webkit-animation-name: backInUp;
+            animation-name: backInUp;
   }
   .gender__description {
     color: #fff;
