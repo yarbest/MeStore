@@ -4357,8 +4357,15 @@ body {
   font-family: "Montserrat";
   font-size: 1.6rem;
   font-weight: 500;
-  background-image: url(../img/bg-main.jpg);
   background-size: cover;
+}
+
+.webp {
+  background-image: url(../img/bg-main.webp);
+}
+
+.no-webp {
+  background-image: url(../img/bg-main.jpg);
 }
 
 .webp .hero {
