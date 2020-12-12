@@ -61,6 +61,33 @@ $(document).ready(function () {
     $("#cube-loader").fadeOut();
     //preloader------------------------------------------------------------------
 
+    // TILT --------------------------------------------------------------------------
+    if (window.matchMedia("(min-width: 1200px)").matches) {
+        $(".hero__title").tilt({
+            speed: 6000,
+            transition: true,
+            // scale: 1.1,
+        });
+
+        $(".featured-slide__image-wrap").tilt({
+            speed: 6000,
+            transition: true,
+        });
+
+        $(".news-item").tilt({
+            maxTilt: 10,
+            speed: 6000,
+            transition: true,
+        });
+
+        $(".banner").tilt({
+            maxTilt: 10,
+            speed: 6000,
+            transition: true,
+        });
+    }
+    // TILT --------------------------------------------------------------------------
+
     //slider------------------------------------------------------------------
     $(".featured-slider").slick({
         prevArrow: $(".slider-arrows__prev"), //назначаем кастомные стрелки на роль переключателей слайдера
