@@ -66,7 +66,6 @@ $(document).ready(function () {
         $(".hero__title").tilt({
             speed: 6000,
             transition: true,
-            // scale: 1.1,
         });
 
         $(".featured-slide__image-wrap").tilt({
