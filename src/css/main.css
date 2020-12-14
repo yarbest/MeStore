@@ -2074,6 +2074,8 @@ button {
     -o-text-overflow: ellipsis;
        text-overflow: ellipsis;
     overflow: hidden;
+    -ms-flex-direction: column;
+        flex-direction: column;
   }
 }
 
@@ -3102,6 +3104,8 @@ button {
   -o-text-overflow: ellipsis;
      text-overflow: ellipsis;
   overflow: hidden;
+  -ms-flex-direction: column;
+      flex-direction: column;
   max-width: 230px;
 }
 
