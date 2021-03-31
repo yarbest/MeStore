@@ -49,11 +49,13 @@
 =cut-text ($number-of-rows)
     display: -webkit-box 
     -webkit-line-clamp: $number-of-rows
-    -webkit-box-orient: vertical
+    -webkit-box-orient: vertical 
+    //сайт can i use пишет, что это свойство не работает в Firefox, и нужно использовать префикс moz
+    //но с 49 версии свойству layout.css.prefixes.webkit по умолчанию выставлено true, поэтому оно работает
+    //ну и + я зашел на сайт через Firefox и этот браузер сам дописал свойство -moz-box-orient: vertical 
     text-overflow: ellipsis
     overflow: hidden
-
-    flex-direction: column
+//использовать так +cut-text(число_строк)
 
 html
     font-size: 62.5%
